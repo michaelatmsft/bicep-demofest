@@ -5,7 +5,7 @@ param workspace string
   resource workspace_Microsoft_SecurityInsights_85f2eac9_43f1_480e_b8ad_473375c195c0 'Microsoft.OperationalInsights/workspaces/providers/AutomationRules@2022-12-01-preview' = {
     name: '${workspace}/Microsoft.SecurityInsights/85f2eac9-43f1-480e-b8ad-473375c1c999'
     properties: {
-      displayName: 'Demofest Automation Rule'
+      displayName: 'Demofest Automation Rule Test'
       order: 1
       triggeringLogic: {
         isEnabled: true
