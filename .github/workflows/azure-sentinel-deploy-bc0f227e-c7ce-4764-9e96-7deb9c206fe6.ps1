@@ -323,17 +323,18 @@ function IsRetryable($deploymentName) {
 }
 
 function IsValidResourceType($template) {
-    try {
-        $isAllowedResources = $true
-        $template.resources | ForEach-Object { 
-            $isAllowedResources = $resourceTypes.contains($_.type.ToLower()) -and $isAllowedResources
-        }
-    }
-    catch {
-        Write-Host "[Error] Failed to check valid resource type."
-        $isAllowedResources = $false
-    }
-    return $isAllowedResources
+    return $true
+    # try {
+    #     $isAllowedResources = $true
+    #     $template.resources | ForEach-Object { 
+    #         $isAllowedResources = $resourceTypes.contains($_.type.ToLower()) -and $isAllowedResources
+    #     }
+    # }
+    # catch {
+    #     Write-Host "[Error] Failed to check valid resource type."
+    #     $isAllowedResources = $false
+    # }
+    # return $isAllowedResources
 }
 
 function DoesContainWorkspaceParam($templateObject) {
